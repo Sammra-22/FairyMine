@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion Versions.compile_sdk
+    defaultConfig {
+        applicationId "com.nordic.fairymine"
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+        versionCode Versions.app_version_code
+        versionName Versions.app_version_name
+        testInstrumentationRunner 'com.nordic.fairymine.MockTestRunner'
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    signingConfigs {
+        debug {
+            storeFile file(getDebugKeyStoreFile())
+            storePassword getDebugKeyStorePassword()
+            keyAlias getDebugKeyStoreKeyAlias()
+            keyPassword getDebugKeyStoreKeyPassword()
+        }
+        release {
+            storeFile file(getDebugKeyStoreFile())
+            storePassword getDebugKeyStorePassword()
+            keyAlias getDebugKeyStoreKeyAlias()
+            keyPassword getDebugKeyStoreKeyPassword()
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            zipAlignEnabled true
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            useProguard true
+            debuggable true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation Libs.kotlin_stdlib
+    implementation Libs.constrain_layout
+    implementation Libs.play_services
+
+    testImplementation Libs.test_junit
+    testImplementation Libs.mockito_inline
+    testImplementation Libs.mockito_core
+    testImplementation Libs.test_json
+
+    androidTestImplementation Libs.test_runner
+    androidTestImplementation Libs.test_espresso_core
+    androidTestImplementation Libs.test_espresso_intents
+    androidTestImplementation Libs.test_espresso_contrib
+    androidTestImplementation Libs.test_mock_server
+    androidTestImplementation Libs.test_rules
+    kaptAndroidTest Libs.dagger_compiler
+    androidTestImplementation Libs.dagger
+    androidTestImplementation Libs.dagger_support
+
+
+    // Android support libs
+    //kapt Libs.databinding_compiler
+    implementation Libs.support_v13
+    implementation Libs.appcompat_v7
+    implementation Libs.design
+    implementation Libs.cardview_v7
+    implementation Libs.recyclerview_v7
+
+    // Parcelable
+    implementation Libs.paperparcel
+    implementation Libs.paperparcel_kotlin
+    kapt Libs.paperparcel_compiler
+
+    // Dagger (DI)
+    kapt Libs.guava
+    kapt Libs.dagger_processor
+    kapt Libs.dagger_compiler
+    implementation Libs.dagger
+    implementation Libs.dagger_support
+
+    // RxJava - RxAndroid
+    implementation Libs.rxandroid
+    implementation Libs.rxjava
+    implementation Libs.rxpreferences
+
+    // API libraries
+    implementation Libs.joda_time
+    implementation Libs.okhttp_log
+    implementation Libs.okhttp
+    implementation Libs.gson
+    implementation Libs.gson_fire
+    implementation Libs.retrofit2
+    implementation Libs.retrofit2_gson
+    implementation Libs.retrofit2_rxjava
+    implementation Libs.retrofit2_scalars
+    implementation Libs.retrofit2_rxAdapter
+
+    // Ad Module
+    implementation project(':module-ad-sdk')
+}
+
+static def getDebugKeyStoreFile() {
+    return "debug.keystore"
+}
+
+static def getDebugKeyStorePassword() {
+    return "android"
+}
+
+static def getDebugKeyStoreKeyAlias() {
+    return "androiddebugkey"
+}
+
+static def getDebugKeyStoreKeyPassword() {
+    return "android"
+}
+
+static def getReleaseKeyStoreFile() {
+    return System.getenv("RELEASE_KEYSTORE_PATH") as String ?: "ignore"
+}
+
+static def getReleaseKeyStorePassword() {
+    return System.getenv("RELEASE_STORE_PASSWORD") as String ?: "ignore"
+}
+
+static def getReleaseKeyStoreKeyAlias() {
+    return System.getenv("RELEASE_KEY_ALIAS") as String ?: "ignore"
+}
+
+static def getReleaseKeyStoreKeyPassword() {
+    return System.getenv("RELEASE_KEY_PASSWORD") as String ?: "ignore"
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,30 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="customerInfo"
+            type="com.nordic.fairymine.common.form.InfoRow" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_4">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/customer_info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@{ customerInfo.hasError? @color/tintError : @color/colorPrimaryDark }"
+            android:hint="@{customerInfo.label}"
+            android:inputType="@{customerInfo.inputType}"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@{customerInfo.value}"
+            android:afterTextChanged="@{customerInfo.textWatcher}"
+            tools:hint="Customer Info" />
+
+    </FrameLayout>
+</layout>

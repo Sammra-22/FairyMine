@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_4">
+
+        <TextView
+            android:id="@+id/txt_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:textAppearance="@style/Text.Header"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/txt_dialog_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Text.Body"
+            tools:text="Body" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dp_12"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_dialog_dismiss"
+                style="@style/AppWidget.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="button dismiss" />
+
+            <Button
+                android:id="@+id/btn_dialog_action"
+                style="@style/AppWidget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="button action" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

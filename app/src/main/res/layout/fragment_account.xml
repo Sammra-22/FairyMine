@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_6"
+            android:paddingTop="@dimen/dp_6">
+
+            <com.nordic.fairymine.common.view.widgets.CardLayout
+                android:id="@+id/account_card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <LinearLayout
+                    style="@style/AppWidget.ChildInCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:src="@drawable/ic_info_outline"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_info_body" />
+
+                </LinearLayout>
+
+            </com.nordic.fairymine.common.view.widgets.CardLayout>
+
+            <com.nordic.fairymine.common.view.widgets.CardLayout
+                android:id="@+id/account_card_vouchers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_card_info">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/account_vouchers_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.nordic.fairymine.common.view.widgets.CardLayout>
+
+            <com.nordic.fairymine.common.view.widgets.CardLayout
+                android:id="@+id/account_card_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_card_vouchers">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/account_pending_orders_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.nordic.fairymine.common.view.widgets.CardLayout>
+
+            <com.nordic.fairymine.common.view.widgets.CardLayout
+                android:id="@+id/account_card_interrupted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_card_pending">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/account_interrupted_orders_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.nordic.fairymine.common.view.widgets.CardLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</layout>

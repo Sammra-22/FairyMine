@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "635192498586",
+    "project_id": "fairymine-1533487770521"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942864013018:android:10c57f0879b821c2",
+        "android_client_info": {
+          "package_name": "com.nordic.fairymine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635192498586-hk1ep14f0bcbq9vjflplnhu3mpvvomnm.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "635192498586-hk1ep14f0bcbq9vjflplnhu3mpvvomnm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nordic.fairymine",
+            "certificate_hash": "4346baa063aef32dff252d0f737c45411333ffb0"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX-fu_-nLRv86y7r_YsXANirbAXIJM5y4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

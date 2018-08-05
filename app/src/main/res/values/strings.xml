@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">FairyMine</string>
+    <string name="user_agent">FairyMine/%1$s (%2$s (%3$d); Android %4$s)</string>
+    <string name="nbsp">&#160;</string>
+
+    <!-- Strings - login -->
+    <string name="registration_intro_header">Welcome to FairyMine!</string>
+    <string name="registration_intro_body">Please sign in with a valid Google account to access your profile or create new one</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_number">This phone number is too short</string>
+    <string name="error_incorrect_number">This phone number is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+    <!-- Strings - Menu -->
+    <string name="menu_main_about">About</string>
+    <string name="menu_main_contact">Contact</string>
+    <string name="menu_main_terms">Terms &amp; conditions</string>
+
+    <!-- Strings - Label -->
+    <string name="label_country">Country</string>
+    <string name="label_age">Age</string>
+    <string name="label_device">Device</string>
+    <string name="label_phone_number">Phone number</string>
+
+    <!-- Strings - Action -->
+    <string name="action_ok">Ok</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_activate">Activate</string>
+    <string name="action_dial">Dial code</string>
+    <string name="action_next">Next</string>
+    <string name="action_register">Register</string>
+    <string name="action_get_offer">Get Offer</string>
+    <string name="action_submit">Submit</string>
+    <string name="action_resume">Resume</string>
+
+    <!-- Strings - errors -->
+    <string name="error_network">Network problem</string>
+    <string name="error_network_action_retry">Tap to retry</string>
+
+    <!-- Strings - Dialog -->
+    <string name="dialog_register_error_title">Registration error</string>
+    <string name="dialog_register_error_body">A registration problem occurred. Please try again</string>
+    <string name="dialog_authenticate_error_title">Authentication error</string>
+    <string name="dialog_authenticate_error_body">A problem occurred when trying to sign you in. Please try again</string>
+    <string name="dialog_authenticate_btn_cancel">Cancel</string>
+    <string name="dialog_authenticate_btn_retry">Retry</string>
+    <string name="dialog_order_progress">Order in progress&#8230;</string>
+    <string name="dialog_order_success_title">New Voucher!</string>
+    <string name="dialog_order_success_body">You have received now a new voucher. You can activate it anytime you want within its validation period.</string>
+    <string name="dialog_order_failure_title">Something went wrong!</string>
+    <string name="dialog_order_failure_body">A problem occurred when trying to send your order. Claim your voucher by resubmitting your pending transaction.</string>
+    <string name="dialog_order_error_network_title">Connection problem!</string>
+    <string name="dialog_order_error_network_body">A network error occurred, please check your connection. Claim your voucher by resubmitting your pending transaction.</string>
+    <string name="dialog_account_voucher_code_title">Voucher code:\n\n%s</string>
+    <string name="dialog_account_voucher_code_body">Activate the voucher by dialing the ussd code above in your device.</string>
+
+    <!-- Strings - Main pager -->
+    <string name="main_tab_account">My Account</string>
+    <string name="main_tab_offers">Offerings</string>
+
+    <string name="account_info_body">Activate your acquired vouchers below in order to enjoy the earned free data.</string>
+    <string name="account_vouchers_title">Vouchers</string>
+    <string name="account_vouchers_empty">No vouchers found</string>
+    <string name="account_voucher_unit_title">Voucher %1$,.0f %2$s</string>
+    <string name="account_voucher_unit_desc">A one time voucher that is worth %1$,.0f %2$s of data.</string>
+    <string name="account_orders_pending_header_title">Pending orders</string>
+    <string name="account_orders_interrupted_header_title">Resume now</string>
+    <string name="account_orders_pending_empty">No pending orders found</string>
+    <string name="account_order_pending_title">Transaction - %1$,.0f %2$s</string>
+    <string name="account_order_pending_desc">Resend this pending order to acquire %1$,.0f %2$s of data.</string>
+    <string name="account_order_interrupted_title">Ad Order - %1$,.0f %2$s</string>
+    <string name="account_order_interrupted_desc">Resume interrupted Ads and acquire %1$,.0f %2$s of data.</string>
+
+    <string name="offers_ads_title">Ad Offers</string>
+    <string name="offers_ads_empty">No Ad based offerings found</string>
+    <string name="offers_ads_loading_progress">Loading your offer.\nPlease wait&#8230;</string>
+
+    <!-- Strings - About -->
+    <string name="about_title">About FairyMine</string>
+    <string name="about_body"><![CDATA[FairyMine is an app where brands and mobile users interact and generate a tailored mobile advertising experience without the limitation of being intrusive.]]></string>
+
+    <!-- Strings - Contact -->
+    <string name="contact_title">Hello dear customer</string>
+    <string name="contact_body">Your opinion or experience is important to us and we are glad to listen your feedback. Also in case of a claim please contact us by email at: fairymine@gmail.com</string>
+    <string-array name="contact_highlights">
+        <item>FairyMine@gmail.com</item>
+    </string-array>
+    <string-array name="contact_links">
+        <item>FairyMine@gmail.com</item>
+    </string-array>
+
+
+    <!-- Strings - Terms -->
+    <string name="terms_title">LICENSE AGREEMENT FOR THE USER</string>
+    <string name="terms_body"><![CDATA[<div>Read carefully all the rights and restrictions described in this End User License Agreement.</div>
+<div><strong>AGREEMENT</strong><br/>
+By accepting you acknowledge having read, understand the highlighted agreement and you agree to be bound by its terms and conditions.
+</div>
+]]></string>
+
+
+</resources>

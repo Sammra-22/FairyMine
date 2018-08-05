@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/registration_subscription"
+        style="@style/AppWidget.Card.Host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            style="@style/AppWidget.ChildInCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/form_input_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/form_done_button"
+                style="@style/AppWidget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/form_input_list"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dp_32"
+                tools:text="@string/action_register" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>
